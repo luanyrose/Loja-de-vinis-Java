@@ -5,18 +5,17 @@ public class Vinil {
     private String titulo;
     private String artista;
     private double precoVenda;
-    private double precoAluguel;
     private String genero;
     private int qtdDisponivel;
 
     public Vinil(int codigo, String titulo, String artista,
-                 double precoVenda, double precoAluguel, int qtdDisponivel,
+                 double precoVenda, int qtdDisponivel,
                  String genero) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.artista = artista;
         this.precoVenda = precoVenda;
-        this.precoAluguel = precoAluguel;
+       
         this.qtdDisponivel = qtdDisponivel;
         this.genero = genero;
     }
@@ -25,7 +24,7 @@ public class Vinil {
     public String getTitulo() { return titulo; }
     public String getArtista() { return artista; }
     public double getPrecoVenda() { return precoVenda; }
-    public double getPrecoAluguel() { return precoAluguel; }
+
     public String getGenero() { return genero; }
     public int getQtdDisponivel() { return qtdDisponivel; }
 

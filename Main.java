@@ -3,8 +3,8 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         // Vinis (2 exemplos)
-        Vinil v1 = new Vinil(1, "Igor", "Tyler, the Creator", 80.0, 15.0, 5, "Rap");
-        Vinil v2 = new Vinil(2, "Puberty 2", "Mitski", 60.0, 12.0, 3, "Indie");
+        Vinil v1 = new Vinil(1, "Igor", "Tyler, the Creator", 80.0, 5, "Rap");
+        Vinil v2 = new Vinil(2, "Puberty 2", "Mitski", 60.0, 3, "Indie");
 
         // Estoque (agregação com vinis)
         Estoque estoque = new Estoque();

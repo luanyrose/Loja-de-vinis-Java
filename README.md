@@ -16,8 +16,8 @@ objetos, dividindo as responsabilidades entre <em>pessoas</em>, <em>itens (vinis
   </tr>
   <tr>
     <td><strong>Cliente</strong> (extends Pessoa)</td>
-    <td>tipoCliente, historicoCompras, historicoAlugueis</td>
-    <td>Representa o cliente, com histórico de compras e aluguéis.</td>
+    <td>tipoCliente, historicoCompras</td>
+    <td>Representa o cliente, com histórico de compras.</td>
   </tr>
   <tr>
     <td><strong>Funcionario</strong> (extends Pessoa)</td>
@@ -31,7 +31,7 @@ objetos, dividindo as responsabilidades entre <em>pessoas</em>, <em>itens (vinis
   <tr><th>Classe</th><th>Atributos</th><th>Descrição</th></tr>
   <tr>
     <td><strong>Vinil</strong></td>
-    <td>codigo, titulo, artista, precoVenda, precoAluguel, genero, qtdDisponivel</td>
+    <td>codigo, titulo, artista, precoVenda, genero, qtdDisponivel</td>
     <td>Define cada disco disponível na loja.</td>
   </tr>
   <tr>
@@ -60,7 +60,7 @@ objetos, dividindo as responsabilidades entre <em>pessoas</em>, <em>itens (vinis
 <ul>
   <li><strong>Herança:</strong> Cliente e Funcionario herdam de Pessoa.</li>
   <li><strong>Composição:</strong> Compra contém vários ItemCompra (1..*).</li>
-  <li><strong>Associação:</strong> Cliente realiza Compras e Aluguéis.</li>
+  <li><strong>Associação:</strong> Cliente realiza Compras.</li>
   <li><strong>Agregação:</strong> Estoque possui vários Vinis.</li>
 </ul>
 
