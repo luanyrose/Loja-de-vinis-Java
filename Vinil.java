@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 // Representa um disco de vinil vendido/locado na loja.
 public class Vinil {
     // Atributos simples do vinil
@@ -7,6 +10,8 @@ public class Vinil {
     private double precoVenda;
     private String genero;
     private int qtdDisponivel;
+    // Relação direta com ItemCompra - lista de itens de compra que contêm este vinil
+    private List<ItemCompra> itensCompra;
 
     public Vinil(int codigo, String titulo, String artista,
                  double precoVenda, int qtdDisponivel,
@@ -18,6 +23,7 @@ public class Vinil {
        
         this.qtdDisponivel = qtdDisponivel;
         this.genero = genero;
+        this.itensCompra = new ArrayList<>();
     }
 
     public int getCodigo() { return codigo; }
@@ -27,6 +33,14 @@ public class Vinil {
 
     public String getGenero() { return genero; }
     public int getQtdDisponivel() { return qtdDisponivel; }
+    public List<ItemCompra> getItensCompra() { return itensCompra; }
+
+    // Adiciona um ItemCompra à lista (chamado automaticamente pelo ItemCompra)
+    public void adicionarItemCompra(ItemCompra itemCompra) {
+        if (itemCompra != null && !itensCompra.contains(itemCompra)) {
+            itensCompra.add(itemCompra);
+        }
+    }
 
     // Baixa a quantidade do estoque deste vinil (evita negativo)
     public void diminuirEstoque(int quantidade) {
